@@ -57,12 +57,16 @@ I'm not sure if this will work on other's machines, but it's worth documenting. 
         git checkout --orphan develop
         git pull origin develop
 
+8. Set the upstream branch to track the mercurial master branch:
+
+        git config hg.tracking.upstream "master"
+
 If you did everything right, your upstream branch should be identical to, or a fast-forward version of my upstream branch. When you run `git pull origin upstream` you should get something to the tune of "everything is up-do-date" or "your version is ahead of origin". The master and develop branches should have parity with my repository.
 
 Now you can pull the latest code from the original mercurial repository using:
 
     git checkout upstream
-    git-hg pull master
+    git-hg pull
 
 
 
