@@ -69,7 +69,9 @@ Now you can pull the latest code from the original mercurial repository using:
     git-hg pull
 
 
+# Original documentation for Django-registration
 
+```
 ========================
 Django user registration
 ========================
@@ -83,3 +85,4 @@ For installation instructions, see the file "INSTALL" in this
 directory; for instructions on how to use this application, and on
 what it provides, see the file "quickstart.rst" in the "docs/"
 directory.
+```
