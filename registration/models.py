@@ -57,7 +57,7 @@ class RegistrationManager(models.Manager):
                 return False
             if not profile.activation_key_expired():
                 user = profile.user
-                if settings.REGISTRATION_DEFAULT_GROUP_NAME:
+                if hasattr(settings, 'REGISTRATION_DEFAULT_GROUP_NAME'):
                     user.groups.add(Group.objects.get(name=settings.REGISTRATION_DEFAULT_GROUP_NAME))
                 user.is_active = True
                 user.save()
@@ -65,7 +65,7 @@ class RegistrationManager(models.Manager):
                 profile.save()
                 return user
         return False
-    
+
     def create_inactive_user(self, username, email, password,
                              site, send_email=True):
         """
