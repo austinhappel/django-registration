@@ -15,17 +15,22 @@ This is a fork of the Django-registration module written by [ubernostrum](https:
 
 # Installation using pip
 
+Because this is a custom package pulled from github, the `pip install` statement uses a github url instead of just a normal package name.
+
+Also, if you want to ensure that pip records this requirement correctly when you run `pip freeze`, you have to install with the `-e` flag, and add `#egg=django-registration` to the end. More info on that [here](http://stackoverflow.com/questions/11560056/pip-freeze-does-not-show-repository-paths-for-requirements-file).
+
 General example:
 
-    pip install git+git://github.com/austinhappel/django-registration.git@<tag, branch, or commit SHA>
+    pip install -e git+git://github.com/austinhappel/django-registration.git@<tag, branch, or commit SHA>#egg=django-registration
 
 For most likely a stable install:
 
-    pip install git+git://github.com/austinhappel/django-registration.git@master
+    pip install -e git+git://github.com/austinhappel/django-registration.git@master#egg=django-registration
 
 For bleeding edge:
     
-    pip install git+git://github.com/austinhappel/django-registration.git@develop
+    pip install -e git+git://github.com/austinhappel/django-registration.git@develop#egg=django-registration
+
 
 
 # Creating the merged git/hg repository
